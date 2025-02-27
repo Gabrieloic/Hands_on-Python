@@ -4,13 +4,14 @@
 
 # Intro a Python et exercices
 
-# **************     Commandes de bases pour commencer       ***************************
+**************     Commandes de bases pour commencer       ***************************
 
-#mot = "Cameroun"
-#print (len(mot))
-#nom =input('donnez votre nom : ')
-#prenom =input('donnez votre prenom : ')
-# print ('vous etes ' + nom + ' ' + prenom + '!')
+
+  mot = "Cameroun" 
+  print (len(mot))
+  nom =input('donnez votre nom : ')
+  prenom =input('donnez votre prenom : ')
+  print ('vous etes ' + nom + ' ' + prenom + '!')
 
 #print (type('YES'))
 
