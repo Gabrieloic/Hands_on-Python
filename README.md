@@ -105,7 +105,7 @@
 
 ## if , else if
 
-le code s'applique si la condition est remplie
+# le code s'applique si la condition est remplie
 
 # on peut directement convertir en entier la valeur recue au clavier
     age= int(input('saisis ton age: '))
@@ -121,3 +121,13 @@ le code s'applique si la condition est remplie
         print('tu es majeur')
     else:
         print('tu es mineur')
+
+# on peut rajouter un else if ( elif) et pour faut bien surveiller les conditions car dans les syntaxes precedentes on a mis 'age >=18'
+    age= int(input('saisis ton age: '))
+    if age >18:
+        print('tu es majeur')
+    elif age ==18:
+        print('tu viens de passer le cap, bienvenu chez les adultes')
+    else:
+        print('tu es mineur')
+
