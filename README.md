@@ -1,7 +1,7 @@
 ## Hands_on-Python
 
 
-### ******     Intro et Exercices    ******
+### ******    1: Intro et Exercices    ******
 
 ```bash
 
@@ -75,7 +75,7 @@
   print(type(num))
 ```
 
-### ****** Les Variables et Types de donnees ******
+### ******  2: Les Variables et Types de donnees ******
 
 ```bash
 # Une variable est un espace memoire dans lequel on stocke des donnees
@@ -99,7 +99,7 @@
   <class 'list'> liste = peut contenir des entiers, chaines et reel
 ```
 
-### ****** Les Conditions  ******
+### ****** 3: Les Conditions  ******
 
 ```bash
 
@@ -142,7 +142,7 @@
     ' < '  inferieur strictement
 ```
 
-### ****** Les Boucles  ******
+### ****** 4: Les Boucles  ******
 
  ```bash
 ## For et While
@@ -161,7 +161,7 @@
 # Si on ne rajoute pas l'incrementation on cree ainsi une boucle infinie et il va afficher 1 sans s'arreter
 ```    
 
-### ****** Les listes  ******
+### ******  5: Les listes  ******
 
 ```bash
 # Une liste permet de stocker plusieurs variables dans une seule
@@ -193,7 +193,7 @@
     goyave
 ```
 
-### ****** Les Fonctions personalisées  ******
+### ******  6: Les Fonctions personalisées  ******
 
 ```bash
 
@@ -226,7 +226,7 @@
     print(resultat)
 ```
 
-### ******   Exercices 1    ******
+### ******   Exercices 2    ******
 
 ```bash
 
@@ -270,6 +270,9 @@
         bonjour_i_fois(i)
 ```
 
+### ******   Les Dictionnaires    ******
 
+```bash
 
+in
 ```
