@@ -16,7 +16,7 @@
 #lit la valeur d'une variable saisie au clavier et l'affiche
   nom =input('donnez votre nom : ')
   prenom =input('donnez votre prenom : ')
-  print ('vous etes ' + nom + ' ' + prenom + '!')
+  print ('vous etes ' + nom + ' ' + prenom + ' !')
 
 #affiche le type d'un element
   print (type('YES'))
