@@ -1,32 +1,41 @@
 # Hands_on-Python
 
+
+******     Intro a Python et exercices    ******
+
 ```bash
 
-# Intro a Python et exercices
+## Commandes de bases pour commencer 
 
-**************     Commandes de bases pour commencer       ***************************
-
-
+#instantie une variable et on l'affiche
   mot = "Cameroun" 
   print (len(mot))
+  Age = 45
+  print(int(Age))
+
+#lit la valeur d'une variable saisie au clavier et l'affiche
   nom =input('donnez votre nom : ')
   prenom =input('donnez votre prenom : ')
   print ('vous etes ' + nom + ' ' + prenom + '!')
 
-#print (type('YES'))
+#affiche le type d'un element
+  print (type('YES'))
 
-#Age = 45
-#print(int(Age))
+#cree une boucle simple
+  for i in range(5):
+      print(i)
 
-#for i in range(5):
-#    print(i)
+# differentes operations sur une liste
+  nombre =[4,6,90,12,1.5]
+  print (sum(nombre))
+  print (max(nombre))
+  print (min(nombre))
+  print (sorted(nombre))
+```bash
 
-#nombre =[4,6,90,12,1.5]
-#print (sum(nombre))
-#print (max(nombre))
-#print (min(nombre))
-#print (sorted(nombre))
+## Exercices partie 1
 
+```bash
 
 # exo 1
 
