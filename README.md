@@ -78,3 +78,4 @@
 
 # Une variable est un espace memoire dans lequel on stocke des donnees
 
+```bash
