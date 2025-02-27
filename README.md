@@ -80,3 +80,16 @@
 ```bash
 # Une variable est un espace memoire dans lequel on stocke des donnees
 
+#les differents types de variables que nous avons
+  nom = 'gab'
+  age = 27
+  taille =1.80
+  majeur = True
+  nombre = [2,45,42,98]
+  print(type(nom))
+  print(type(age))
+  print(type(taille))
+  print(type(majeur))
+  print(type(nombre))
+#Voici le resultat que nous avons a la sortie
+<img width="172" alt="1239582524" src="https://github.com/user-attachments/assets/783284b2-c5a1-4e2b-b199-0df5dda49ad4" />
