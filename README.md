@@ -33,7 +33,7 @@
   print (sorted(nombre))
 ```
 
-## Exercices partie 1
+### ******   Exercices partie 1    ******
 
 ```bash
 
@@ -75,7 +75,7 @@
   print(type(num))
 ```
 
-# ****** Les Variables et Types de donnees ******
+### ****** Les Variables et Types de donnees ******
 
 ```bash
 # Une variable est un espace memoire dans lequel on stocke des donnees
@@ -99,7 +99,7 @@
   <class 'list'> liste = peut contenir des entiers, chaines et reel
 ```
 
-# ****** Les Conditions  ******
+### ****** Les Conditions  ******
 
 ```bash
 
@@ -142,7 +142,8 @@
     ' < '  inferieur strictement
 ```
 
-# ****** Les Boucles  ******
+### ****** Les Boucles  ******
+
  ```bash
 ## For et while
 
