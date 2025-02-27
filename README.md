@@ -1,7 +1,7 @@
 ## Hands_on-Python
 
 
-# ******     Intro et Exercices    ******
+### ******     Intro et Exercices    ******
 
 ```bash
 
@@ -33,7 +33,7 @@
   print (sorted(nombre))
 ```
 
-# Exercices partie 1
+## Exercices partie 1
 
 ```bash
 
