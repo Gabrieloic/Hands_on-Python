@@ -92,4 +92,14 @@
   print(type(majeur))
   print(type(nombre))
 #Voici le resultat que nous avons a la sortie
-<img width="172" alt="1239582524" src="https://github.com/user-attachments/assets/783284b2-c5a1-4e2b-b199-0df5dda49ad4" />
+  <class 'str'> string = chaine de caractere
+  <class 'int'> integer = entier
+  <class 'float'> reel
+  <class 'bool'> boolean = Vrai ou Faux
+  <class 'list'> liste = peut contenir des entiers, chaines et reel
+```
+
+# ****** Les Conditions if, else if ******
+
+```bash
+intro
