@@ -1,7 +1,7 @@
 # Hands_on-Python
 
 
-******     Intro a Python et exercices    ******
+******     Intro et Exercices    ******
 
 ```bash
 
@@ -99,7 +99,25 @@
   <class 'list'> liste = peut contenir des entiers, chaines et reel
 ```
 
-# ****** Les Conditions if, else if ******
+# ****** Les Conditions  ******
 
 ```bash
-intro
+
+## if , else if
+
+le code s'applique si la condition est remplie
+
+# on peut directement convertir en entier la valeur recue au clavier
+    age= int(input('saisis ton age: '))
+    if age >=18:
+        print('tu es majeur')
+    else:
+        print('tu es mineur')
+
+# ou alors on peut la convertir dans la syntaxe de la condition
+
+    age= input('saisis ton age: ')
+    if int(age) >=18:
+        print('tu es majeur')
+    else:
+        print('tu es mineur')
