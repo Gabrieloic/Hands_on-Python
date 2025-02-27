@@ -145,6 +145,84 @@
 ### ****** Les Boucles  ******
 
  ```bash
-## For et while
+## For et While
 
+# for permet de repeter une occurence un 'i' nombre de fois
+    for i in range(6):
+        print('hello ' +str(i))
+
+#while
+  compteur = 1 
+  while compteur <=10:
+      print(compteur)
+      compteur +=1 
+# la boucle incrementer compteur de 1 A chaque tour et tant que compteur
+# n'aura pas atteint 10 il continuera et affichera le resultat
+# Si on ne rajoute pas l'incrementation on cree ainsi une boucle infinie et il va afficher 1 sans s'arreter
+```    
+
+### ****** Les listes  ******
+
+```bash
+# Une liste permet de stocker plusieurs variables dans une seule
+
+  #position     0        1      2
+    fruits= ['pommes','banane','poires']
+    print(fruits[1]) 
+# sachant que les positions commencent par 0
+
+# pour rajouter un element dans la liste
+    fruits.append('goyave')
+    print(fruits)
+# le resultat devient
+    ['pommes', 'banane', 'poires', 'goyave']
+
+# pour supprimer un element de la liste
+    fruits.remove('pommes')
+    print(fruits)
+# le resultat devient
+    ['banane', 'poires', 'goyave']
+
+# on peut aussi parcourir les elements d'une liste
+    for test in fruits:
+        print(test)
+# et il nous liste le resultat en dehors de la liste
+    pommes
+    banane
+    poires
+    goyave
+```
+
+### ****** Les Fonctions personalisées  ******
+
+```bash
+
+# Une fonction personalisée permet d'eviter de repeter le code et mieux s'organiser
+
+#on cree la fonction
+    def direbonjour(nom):
+        print('bonjour ' + nom)
+
+    nom =input('entrer le nom 1 : ')
+    nom_2 =input('entrer le nom 2 : ')
+
+# on peut appeler la fonction a n'importe quel moment
+    direbonjour(nom)
+    direbonjour(nom_2)
+# le resultat affiché
+    bonjour (valeur_nom_1)
+    bonjour (valeur_nom_2)
+
+# on peut egalement creer une  fonction de calcul
+
+    def somme(a, b):
+        return a + b
+
+# on demande de saisir des informations afin de les additioner
+    salaire_1= int(input('quel est le salaire 1 ? '))
+    salaire_2= int(input('quel est le salaire 2 ? '))
+    
+    resultat = somme(salaire_1, salaire_2)
+    print(resultat)
+     
 ```
