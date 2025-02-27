@@ -33,7 +33,7 @@
   print (sorted(nombre))
 ```
 
-### ******   Exercices partie 1    ******
+### ******   Exercices 1    ******
 
 ```bash
 
@@ -224,5 +224,43 @@
     
     resultat = somme(salaire_1, salaire_2)
     print(resultat)
-     
+```
+
+### ******   Exercices 1    ******
+
+```bash
+
+# 1: on demande un nombre au user
+# 2: on verifie si le nombre est paire ou impaire mod
+# 3: on affiche tous les nombres de 1 jusqu'à ce nombre
+# 4: on ajoute tout ces nombres dans une liste et on l'affiche
+
+## Correction
+
+# 1: on demande un nombre au user
+    nombre =int(input('veuillez saisir un nombre : '))
+
+# 2: on verifie si le nombre est paire ou impaire mod
+# est-il paire ? soit le reste de lq division du nombre par 2
+
+    if nombre%2==0: 
+        print("c'est un nombre paire")
+    else:
+        print("c'est un nombre impaire ")
+
+# 3: on affiche tous les nombres de 1 jusqu'à ce nombre
+    
+    for i in range(nombre):
+        print(i+1)
+
+# 4: on ajoute tout ces nombres dans une liste et on l'affiche
+
+    list = []
+    for i in range(nombre):
+        list.append(i+1)
+    print(list)
+```
+
+
+
 ```
