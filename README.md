@@ -234,6 +234,8 @@
 # 2: on verifie si le nombre est paire ou impaire mod
 # 3: on affiche tous les nombres de 1 jusqu'à ce nombre
 # 4: on ajoute tout ces nombres dans une liste et on l'affiche
+# 5: on cree une fonction qui affiche bonjour 'i' nombre de fois 
+
 
 ## Correction
 
@@ -259,6 +261,13 @@
     for i in range(nombre):
         list.append(i+1)
     print(list)
+
+# 5: on cree une fonction qui affiche bonjour 'i' nombre de fois 
+    def bonjour_i_fois(bjr):
+        print('bonjour '+ str(i+1) + ' fois ')
+    
+    for i in range(nombre):
+        bonjour_i_fois(i)
 ```
 
 
