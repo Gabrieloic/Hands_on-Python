@@ -1,11 +1,11 @@
-# Hands_on-Python
+## Hands_on-Python
 
 
-******     Intro et Exercices    ******
+## ******     Intro et Exercices    ******
 
 ```bash
 
-## Commandes de bases pour commencer 
+# Commandes de bases pour commencer 
 
 #instantie une variable et on l'affiche
   mot = "Cameroun" 
@@ -37,7 +37,7 @@
 
 ```bash
 
-##Ennoncé Exo 1
+#Ennoncé Exo 1
 
 1: demander au user son nom
 2: on lui souhaite la bienvenu avec son nom
@@ -122,7 +122,9 @@
     else:
         print('tu es mineur')
 
-# on peut rajouter un else if ( elif) et pour faut bien surveiller les conditions car dans les syntaxes precedentes on a mis 'age >=18'
+# on peut rajouter un else if ( elif) et pour faut bien surveiller les conditions
+# car dans les syntaxes precedentes on a mis 'age >=18'
+
     age= int(input('saisis ton age: '))
     if age >18:
         print('tu es majeur')
@@ -131,3 +133,17 @@
     else:
         print('tu es mineur')
 
+# les operateurs de comparaison
+    ' == ' egal à
+    ' != ' different de
+    ' >= ' superieur ou egal
+    ' <= ' inferieur ou egal
+    ' > '  superieur strictement
+    ' < '  inferieur strictement
+```
+
+# ****** Les Boucles  ******
+ ```bash
+## For et while
+
+```
