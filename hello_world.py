@@ -1,3 +1,5 @@
+# Intro a Python et exercices
+
 #mot = "Cameroun"
 #print (len(mot))
 #nom =input('donnez votre nom : ')
@@ -45,5 +47,5 @@ age_futur= age+100
 print('dans 100 ans Mr ' + nom + ' aura ' +str(age_futur)+ ' ans et ne sera plus tres jeune' )
 
 # 5: creer une liste de nombre
-phrase = input('veuillez ecrire un truc pour compter le nombre de caracteres')
-print('il y a dans cette phrase ' + str(len(phrase)) + ' caracteres en tout')
+phrase = input('veuillez ecrire un truc pour compter le nombre de caracteres : ')
+print('il y a dans cette phrase ' + str(len(phrase)) + ' caracteres en tout . ')
