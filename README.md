@@ -286,6 +286,23 @@
 # remplace une chaine par ce que nous voulons
   print("bonjour tout le monde".replace("jour", "soir"))
 
+# la fonction split permet de supprimer un element d'une chaine et de creer une liste avec le reste 
+  print("1, 2, 3, 4, 5, 6, 7".split(","))
+# on obtient
+  ['1', ' 2', ' 3', ' 4', ' 5', ' 6', ' 7']
+
+# on peut mettre les parametres que nous souhaitons enlever
+  print("1, 2, 3, 4, 5, 6, 7".split(", "))
+# on obtient
+  ['1', '2', '3', '4', '5', '6', '7']
+
+# join quant a lui creer une chaine de caractere et peut rajouter des elements que nous souhaitons
+# ici on met en parametre la sortie du split precedent 
+#soit le resultat  ['1', '2', '3', '4', '5', '6', '7']
+  print(".".join("1, 2, 3, 4, 5, 6, 7".split(", ")))
+#on obtient
+  1.2.3.4.5.6.7
+
 ```
 
 ### ******   Les Dictionnaires    ******
