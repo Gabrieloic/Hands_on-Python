@@ -308,11 +308,14 @@
 
 
 # on peut aussi verifier le type d'une chaine avec les differentes methodes
-print("bonjour Le mondE".islower())
-# va retourner false parce que toute la chaine n'est pas lower
-print("bonjour Le mondE".isupper())
+
+  print("bonjour Le mondE".islower())
+# va retourner False parce que toute la chaine n'est pas lower
+
+  print("bonjour Le mondE".isupper())
 # va retourner False parce que toute la chaine n'est pas upper
-print("BONJOUR LE MONDE".isupper())
+
+  print("BONJOUR LE MONDE".isupper())
 ## va retourner True parce que toute la chaine verifier la condition
 
 ```
