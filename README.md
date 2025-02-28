@@ -308,7 +308,7 @@
 
 
 # on peut aussi verifier le type d'une chaine avec les differentes methodes
-		print("bonjour Le mondE".islower())
+print("bonjour Le mondE".islower())
 # va retourner false parce que toute la chaine n'est pas lower
 print("bonjour Le mondE".isupper())
 # va retourner False parce que toute la chaine n'est pas upper
