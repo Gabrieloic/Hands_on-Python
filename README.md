@@ -286,7 +286,7 @@
 # remplace une chaine par ce que nous voulons
   print("bonjour tout le monde".replace("jour", "soir"))
 
-# la fonction split permet de supprimer un element d'une chaine et de creer une liste avec le reste 
+# la methode split permet de supprimer un element d'une chaine et de creer une liste avec le reste 
   print("1, 2, 3, 4, 5, 6, 7".split(","))
 # on obtient
   ['1', ' 2', ' 3', ' 4', ' 5', ' 6', ' 7']
@@ -302,6 +302,8 @@
   print(".".join("1, 2, 3, 4, 5, 6, 7".split(", ")))
 #on obtient
   1.2.3.4.5.6.7
+
+ Join et Split sont des methodes qu'on utilise uniquement sur des chaines de caracteres
 
 ```
 
