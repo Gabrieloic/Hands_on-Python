@@ -270,6 +270,24 @@
         bonjour_i_fois(i)
 ```
 
+### ******   Manipuler les chaines de caracteres    ******
+
+```bash
+
+
+# met toute la chaine en majuscule
+  print("bonJOur".upper())
+# met toute la chaine en minuscule
+  print("bonJOur".lower())
+# met la premiere lettre du premier mot en majuscule
+  print("bonJOur".capitalize())
+# met toute les premires lettres de chaque mot en majuscule
+  print("bonJOur".title())  
+# remplace une chaine par ce que nous voulons
+  print("bonjour tout le monde".replace("jour", "soir"))
+
+```
+
 ### ******   Les Dictionnaires    ******
 
 ```bash
