@@ -33,7 +33,7 @@
   print (sorted(nombre))
 ```
 
-### ******   Exercices 1    ******
+### ******   Exercice 1    ******
 
 ```bash
 
@@ -226,7 +226,7 @@
     print(resultat)
 ```
 
-### ******   Exercices 2    ******
+### ******   Exercice 2    ******
 
 ```bash
 
@@ -485,6 +485,59 @@
     print(reponse.status_code)
 # le resultat est
     200 # c.a.d que le site est accessible depuis notre code
+
+```
+
+### ******   Exercice 3  ******
+
+```bash
+
+# 1: on cree un dico avec ( nom, age, ville)
+# 2: on ecris le dico dans un fichier txt
+# 3: utiliser try except pour eviter des erreurs 
+# 4: on lit et affiche le contenu de notre fichier
+# 5: on demande d'utiliser un module pour donner un chiffre aleatoire
+
+# Solution 
+
+# 1: on cree un dico avec ( nom, age, ville)
+
+# on cree le dico
+    personne = {
+        "nom": "Lydie",
+        "prenom": "sam",
+        "age": 25,
+        "email": "sam_lydie@mugiwara.op",
+        "ville": "Nice"
+    }
+# on affiche en balayant tous les elements 
+    for cle, valeur in personne.items():
+        dico = print(f"{cle} : {valeur}")
+
+# 2: on ecris le dico dans un fichier txt
+# 3: on utilise try except pour eviter des erreurs
+
+    try:
+        with open("mon_fichier_2.txt", "w") as fichier:
+            for cle, valeur in personne.items():
+                fichier.write(f"{cle} : {valeur} \n")
+        print("\nc'est dans la boite !!! \n ")
+    except Exception as e:
+        print("aie aie aie probleme !!! ")
+
+# 4: on lit et affiche le contenu de notre fichier
+
+    try:
+        with open("mon_fichier_3.txt", "r") as fichier:
+            print(fichier.read())
+    except FileNotFoundError:
+        print("aie aie aie le fichier n'existe pas !!\n ")
+
+# 5: on demande d'utiliser un module pour donner un chiffre aleatoire
+
+    from random import randint
+    print("nombre aleatoire entre 1 et 90 : ", randint(1,90))
+    
 
 in
 ```
