@@ -363,6 +363,57 @@
 
 ```bash
 
+# les tuples c'est une liste qui est imuable c.a.d qui ne peut pas etre modifie une fois creee
+# ce qui peut etre interessant pour securiser des donnees et empecher des modifications excessives
+# comme par exemple des cles API, on prefere les mettre dans un tuple plutot qu'une liste
+
+    prenom = ("Samuel", "lucas", "Romain","Gabriel")
+    print(prenom[2])
+# en resultat on a
+    Romain
+# etant donne que les id des elements se comptent a partir de 0, on peut donc afficher le 3 eme element ainsi
+
+
+```
+
+### ******   Ecrire dans un fichier    ******
+
+```bash
+
+
+# pour le faire on utilise la methode "open"
+
+    with open("mon_fichier_test.txt", "w") as fichier:
+        fichier.write("Salut la famille, ceci est la premiere ligne de mon fichier rajoutee avec la methode open sur Python")
+
+# le " w " qu'on met dans la syntaxe permet de dire qu'on va ecrire, mais s'il y a deja du contenu
+#  dans le fichier il sera ecrase
+# Aussi avec la methode open, si le fichier n'existe pas, il sera cree dans le meme dossier que notre script Python
+
+```
+
+### ******   Ajouter du contenu dans un fichier    ******
+
+```bash
+
+# Pour ajouter du contenu dans un fichier sans supprimer l'existant
+# cette fois c'est avec la lettre " a "
+    with open("mon_fichier_test.txt", "a") as fichier:
+        fichier.write("\nCeci est la nouvelle ligne que je rajoute dans mon fichier")
+# en prenant soin de mettre le " \n " pour passer a la ligne
+
+
+```
+
+### ******   lire un fichier    ******
+
+```bash
+
+    with open("mon_fichier_test.txt", "r") as fichier:
+        contenu = fichier.read()
+        print(contenu)
+# le " r " ici est mis pour read et donc avec cette methode on affiche tout le contenu d'un fichier
+# dans le terminal un peu comme avec une commande " cat " sur linux
 
 in
 ```
