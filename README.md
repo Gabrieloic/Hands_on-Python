@@ -336,12 +336,13 @@
 # on affiche une cle 
     print(personne["nom"])
 
-#on peut modifier une cle en lui donnant un autre valeur
-# ce qui va ecraser la premiere et l'age sera desormais " 33 "
+#on peut modifier une cle en lui donnant un autre valeur, ce qui va ecraser la premiere et l'age sera desormais " 33 "
+
     personne ["age"] = 33
     print(personne["age"])
 
-# on peut aussi ajouter un nouvel element 
+# on peut aussi ajouter un nouvel element
+
     personne["email"] = "contact@dogfather.com"
     print(personne["email"])
 
@@ -398,8 +399,10 @@
 
 # Pour ajouter du contenu dans un fichier sans supprimer l'existant
 # cette fois c'est avec la lettre " a "
+
     with open("mon_fichier_test.txt", "a") as fichier:
         fichier.write("\nCeci est la nouvelle ligne que je rajoute dans mon fichier")
+
 # en prenant soin de mettre le " \n " pour passer a la ligne
 
 
@@ -412,8 +415,76 @@
     with open("mon_fichier_test.txt", "r") as fichier:
         contenu = fichier.read()
         print(contenu)
+
 # le " r " ici est mis pour read et donc avec cette methode on affiche tout le contenu d'un fichier
 # dans le terminal un peu comme avec une commande " cat " sur linux
+
+```
+
+### ******   Gestion des erreurs    ******
+
+```bash
+
+# prenons un cas ou on demande a un user de donner un nombre au clavier mais au lieu d'un nombre il met
+# une lettre, automatiquement python va me retourner une erreur
+# Il faut donc un moyen de dire au user qu'il a fait une erreur en ne mettant pas le bon type demande
+
+    nombre = int(input("donner moi un nombre : "))
+    print("le triple de votre nombre est :", nombre*3)
+
+# jusqu'ici on est bon si le user met un chiffre, le resultat lui donnera le triple de son chiffre
+# mais si le user met une lettre a la place on aura cette erreur
+    Python/hello_world.py
+    donner moi un nombre : ret
+    Traceback (most recent call last):
+      File "/Users/the-dogfather/Documents/Devops/Hands_on-Python/hello_world.py", line 289, in <module>
+        nombre = int(input("donner moi un nombre : "))
+    ValueError: invalid literal for int() with base 10: 'ret'
+# l'erreur dit que le valeur entree n'est pas du meme type que celle attendue
+# dans ce cas pour la resourdre on utilise la methode " try except "
+
+    try:
+        nombre = int(input("donner moi un nombre : "))
+        print("le triple de votre nombre est :", nombre*3)
+    except ValueError:
+        print("Attention vous n'avez pas taper un nombre valide !!!!! ")
+
+# Cette commande va afficher une erreur a l'ecran invitant le user a recommencer
+
+```
+
+### ******   Importer des bibliotheques ou modules   ******
+
+```bash
+
+
+    import math
+    print(math.sqrt(25))
+# on importe la biblio math pour faire le calcul de la racine caree
+
+# on peut importe une simple fonction d'une bibliothe plutot que la bibliotheque entiere
+
+    from random import randint
+    print(randint(1,45))
+# cette fonction me permet de generer un nombre aleatoire entre la selection que je specifie
+
+# on peut aussi importer des modules supplementaires qui ne sont pas presentes nativement par defaut sur python 
+
+
+# on peut intaller une nouvelle bibliotheque depuis notre cli en dehors de l'interpreteur python
+# requests est une lib qui permet d'envoyer des requettes vers un site web histoire de tester la connexion en fonction de la reponse
+# error 200 : Ca veut dire que le site est atteignable
+# error 404 : des chances que le site n'existe plus ...etc 
+
+# l'installation de cette lib se fait avec la commande suivante
+    python3 -m pip install requests
+
+# on va tester si on a access a google
+    import requests
+    reponse = requests.get("https://www.google.com")
+    print(reponse.status_code)
+# le resultat est
+    200 # c.a.d que le site est accessible depuis notre code
 
 in
 ```
