@@ -324,5 +324,45 @@
 
 ```bash
 
+# un dico permet d'associer des cles et des valeurs
+
+# on cree un dico de cette facon
+
+    personne = {
+        "nom" : "Gabriel",
+        "age" : 29,
+        "ville": "Paris"
+    }
+# on affiche une cle 
+    print(personne["nom"])
+
+#on peut modifier une cle en lui donnant un autre valeur
+# ce qui va ecraser la premiere et l'age sera desormais " 33 "
+    personne ["age"] = 33
+    print(personne["age"])
+
+# on peut aussi ajouter un nouvel element 
+    personne["email"] = "contact@dogfather.com"
+    print(personne["email"])
+
+# pour parcourir tout le contenu d'un dictionnaire on fait une boucle
+
+    for cle, valeur in personne.items():
+        print(f"{cle} : {valeur}")
+# on a ca en resultat
+    nom : Gabriel
+    age : 33
+    ville : Paris
+    email : contact@dogfather.com
+
+# le " f " permet d'interpreter tout ce qui est dans la methode print comme una variable ou une expression
+
+```
+
+### ******   Les Tupples    ******
+
+```bash
+
+
 in
 ```
