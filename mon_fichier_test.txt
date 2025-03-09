@@ -1,0 +1,2 @@
+Salut la famille, ceci est la premiere ligne de mon fichier rajoutee avec la methode open sur Python
+Ceci est la nouvelle ligne que je rajoute dans mon fichier

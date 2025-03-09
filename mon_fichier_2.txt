@@ -1,0 +1,5 @@
+nom : Lydie 
+prenom : sam 
+age : 25 
+email : sam_lydie@mugiwara.op 
+ville : Nice 
