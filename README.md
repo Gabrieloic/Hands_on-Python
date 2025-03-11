@@ -539,5 +539,18 @@
     print("nombre aleatoire entre 1 et 90 : ", randint(1,90))
     
 
+# Si on veut trier une liste on peut le faire de cette facon
+
+    # on a la chaine suivante
+        chaine = "Pierre, Julien, Anne, Marie, Lucien"
+    # on commence par isoler chaque element en supprimant le separateur:
+        chaine_liste = chaine.split(", ")
+    # puis on trie la liste qu'on desormais
+        chaine_liste.sort()
+        print(chaine_liste)
+    # Une fois trie, on les rassemble avec la methode join  
+        chaine_en_ordre = ", ".join(chaine_liste)
+        print(chaine_en_ordre)
+        print(2*150)
 in
 ```

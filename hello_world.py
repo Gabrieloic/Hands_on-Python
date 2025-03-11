@@ -381,5 +381,13 @@
 # print("nombre aleatoire entre 1 et 90 : ", randint(1,90))
 
 
-a = "pyth"
-print(a[-5])
+# a = "pyth"
+# print(a[-4])
+# print("mon_fichier.txt".endswith(".txt"))
+
+chaine = "Pierre, Julien, Anne, Marie, Lucien"
+chaine_liste = chaine.split(", ")
+chaine_liste.sort()
+print(chaine_liste)
+chaine_en_ordre = ", ".join(chaine_liste)
+print(chaine_en_ordre)
