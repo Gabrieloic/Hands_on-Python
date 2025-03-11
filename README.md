@@ -551,6 +551,6 @@
     # Une fois trie, on les rassemble avec la methode join  
         chaine_en_ordre = ", ".join(chaine_liste)
         print(chaine_en_ordre)
-        print(2*152)
+        print(2*2548)
 in
 ```
