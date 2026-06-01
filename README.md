@@ -2,7 +2,7 @@
 
 ## PARTIE 1
 
-### ******    1: Intro et Exercices    ******
+### ******    Intro et Exercices    ******
 
 ```bash
 
