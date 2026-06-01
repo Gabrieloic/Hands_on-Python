@@ -291,10 +291,10 @@
 
 # jusqu'ici on est bon si le user met un chiffre, 
 # mais si le user met une lettre a la place on aura cette erreur
-# Python/hello_world.py
+# Python/main.py
 # donner moi un nombre : ret
 # Traceback (most recent call last):
-#   File "/Users/the-dogfather/Documents/Devops/Hands_on-Python/hello_world.py", line 289, in <module>
+#   File "/Users/the-dogfather/Documents/Devops/Hands_on-Python/main.py", line 289, in <module>
 #     nombre = int(input("donner moi un nombre : "))
 # ValueError: invalid literal for int() with base 10: 'ret'
 # l'erreur dit que le valeur entree n'est pas du meme type que celle attendue
@@ -385,9 +385,26 @@
 # print(a[-4])
 # print("mon_fichier.txt".endswith(".txt"))
 
-chaine = "Pierre, Julien, Anne, Marie, Lucien"
-chaine_liste = chaine.split(", ")
-chaine_liste.sort()
-print(chaine_liste)
-chaine_en_ordre = ", ".join(chaine_liste)
-print(chaine_en_ordre + 50)
+# chaine = "Pierre, Julien, Anne, Marie, Lucien"
+# chaine_liste = chaine.split(", ")
+# chaine_liste.sort()
+# print(chaine_liste)
+# chaine_en_ordre = ", ".join(chaine_liste)
+# print(chaine_en_ordre + 50)
+
+
+# exo 1 ........................................................................
+
+# 1: demander au user son nom
+# 2: on lui souhaite la bienvenu avec son nom
+# 3: on lui demande son age
+# 4: on convertir son age
+# 5: on affiche son age dans 100 ans
+# 6: on cree une liste de nombre et on affiche le plus grand et la somme totale
+
+#Solution
+
+
+nombre1 = input("entrer un nombre :")
+nombre2 = input("entrer un nombre :")
+print(f" la somme de {nombre1} et {nombre2} est {int(nombre1) + int(nombre2)}")

@@ -434,7 +434,7 @@
 
 # jusqu'ici on est bon si le user met un chiffre, le resultat lui donnera le triple de son chiffre
 # mais si le user met une lettre a la place on aura cette erreur
-    Python/hello_world.py
+    Python/main.py
     donner moi un nombre : ret
     Traceback (most recent call last):
       File "/Users/the-dogfather/Documents/Devops/Hands_on-Python/hello_world.py", line 289, in <module>
