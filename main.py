@@ -405,6 +405,7 @@
 #Solution
 
 
-nombre1 = input("entrer un nombre :")
-nombre2 = input("entrer un nombre :")
-print(f" la somme de {nombre1} et {nombre2} est {int(nombre1) + int(nombre2)}")
+nombre1 = int(input("entrer un nombre 1 : "))
+nombre2 = int(input("entrer un nombre 2 : "))
+nombre3 = int(input("entrer un nombre 3 : "))
+print(f" la somme de {nombre1} et {nombre2} et {nombre3} est {nombre3+nombre2+nombre1} et le produit est {nombre3*nombre1*nombre2} ")
