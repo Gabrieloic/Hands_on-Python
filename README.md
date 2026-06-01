@@ -330,11 +330,11 @@
 ### ****** Exercice 1 ******
 
 ```bash
-''' .......... exo 1 ............. '''
+``` .......... exo 1 ............. ```
 
-Écrivez un script qui détermine si une chaîne contient ou non le caractère « e ».
+" Écrivez un script qui détermine si une chaîne contient ou non le caractère « e »."
 
-''' ....... solution 1 ........... '''
+``` ....... solution 1 ........... ```
 
 nom = input("entrer une phrase: ")
 print(nom)
@@ -358,12 +358,12 @@ else:
 ### ****** Exercice 2 ******
 
 ```bash
-''' .......... exo 2 ............. '''
+``` .......... exo 2 ............. ```
 
-Écrivez un script qui recopie une chaîne (dans une nouvelle variable), en insérant des astérisques entre les caractères.
+" Écrivez un script qui recopie une chaîne (dans une nouvelle variable), en insérant des astérisques entre les caractères."
 # Par exemple, « gaston » devra devenir « g*a*s*t*o*n »
 
-''' ....... solution 2 ........... '''
+``` ....... solution 2 ........... ```
 
 a = input("entrer une mot: ")
 b = '*'.join(a)
@@ -374,12 +374,14 @@ print(b)
 ### ****** Exercice 3 ******
 
 ```bash
-''' .......... exo 3 ............. '''
+``` .......... exo 3 ............. ```
 
+"
 Écrivez un script qui recopie une chaîne (dans une nouvelle variable) en l_inversant. 
+"
 # Par exemple, « zorglub » deviendra « bulgroz ».
 
-''' ....... solution 3 ........... '''
+``` ....... solution 3 ........... ```
 
 a = input("entrer une mot: ")
 b = ''.join(reversed(a))
@@ -390,8 +392,8 @@ print(b)
 ### ****** Exercice 4 ******
 
 ```bash
-''' .......... exo 4 ............. '''
-
+``` .......... exo 4 ............. ```
+"
 À partir d_une chaine quelconque (par exemple chaine="abcdefghijk" ), 
 écrivez un programme qui récupère et affiche autant de caractères 
 que possible de cette chaine sous forme de suite pyramidale.
@@ -404,8 +406,9 @@ klmno
 pqrstu 
 vwxyzab 
 cdefghij
+"
 
-''' ....... solution 4 ........... '''
+``` ....... solution 4 ........... ```
 
 a = input("entrer une mot: ")
 b = ''.join(a.split(" "))
@@ -467,6 +470,228 @@ dechiffre = cesar(chiffre, -7)
 print(f"=> message original : {message}, \n=> message chiffré : {chiffre}, \n=> message dechiffré : {dechiffre}")
 
 ```
+
+### ****** Exercice 6 ******
+
+```bash
+``` .......... exo 6 ............. ```
+
+" Écrivez un programme qui affiche les 20 premiers termes de la table de multiplication par 7, 
+en signalant au passage (à l'aide d'une astérisque) ceux qui sont des multiples de 3.
+Exemple : 7 14 21 * 28 35 42 * 49 56 63 * 70 77 84 * 91 98 105 * 112 119 126 * 133 140"
+# Par exemple, « gaston » devra devenir « g*a*s*t*o*n »
+
+``` ....... solution 6 ........... ```
+
+a = 1
+while a < 21:
+    b= a*7
+    if b %3 == 0:
+        print(f"{b}*")
+    else :
+        print(b)
+    a += 1
+
+```
+
+### ****** Exercice 7 ******
+
+```bash
+``` .......... exo 7 ............. ```
+
+" Écrivez un programme qui affiche une table de conversion de sommes d'argent exprimées en euros, en dollars canadiens. 
+La progression des sommes de la table sera « géométrique », comme dans l'exemple ci-dessous :
+1 euro(s) = 1.65 dollar(s)
+2 euro(s) = 3.30 dollar(s)
+4 euro(s) = 6.60 dollar(s)
+8 euro(s) = 13.20 dollar(s)
+etc. (S'arrêter à 16384 euros) "
+
+``` ....... solution 7 ........... ```
+
+a = 1
+b = 1.65
+while a < 16383:
+    print(f"{2*a} euros = {a*b} dollars ")
+    a *= 2
+
+```
+
+### ****** Exercice 8 ******
+
+```bash
+``` .......... exo 8 ............. ```
+
+" Écrivez un programme qui affiche une suite de 12 nombres dont chaque terme est égal au triple du terme précédent.
+Vous pouvez consulter le cours : 
+apprendre à programmer avec Python : http://python.developpez.com/cours/TutoSwinnen/ "
+
+``` ....... solution 8 ........... ```
+
+a = 1
+c = 1
+while c < 13:
+    print(3*a)
+    a *= 3
+    c += 1
+
+```
+
+### ****** Exercice 9 ******
+
+```bash
+``` .......... exo 9 ............. ```
+
+" Calculez la somme d'une suite de nombres positifs ou nuls. Comptez combien il y avait de données et combien étaient supérieures à 100.
+Entrer un nombre inférieur ou égal à 0 indique la fin de la suite. "
+
+``` ....... solution 9 ........... ```
+
+somme = 0
+total = 0
+grand = 0
+
+a = int ( input("entrer un nombre pour continuer, sinon 0 pour terminer :"))
+while a > 0:
+    somme += a
+    total += 1
+    if a > 100:
+        grand += 1
+    a = int ( input("entrer un nombre pour continuer, sinon 0 pour terminer : "))
+
+print(f"la somme des nombres est : {somme}")
+print(f"vous avez saisi {total} valeurs en tout, dont {grand} sont supérieures à 100")
+
+```
+
+### ****** Exercice 10 ******
+
+```bash
+``` .......... exo 10 ............. ```
+
+" Une légende de l'Inde ancienne raconte que le jeu d'échecs a été inventé par un vieux sage, que son roi voulut 
+remercier en lui affirmant qu'il lui accorderait n'importe quel cadeau en récompense. 
+Le vieux sage demanda qu'on lui fournisse simplement un peu de riz pour ses vieux jours et plus précisément 
+un nombre de grains de riz suffisant pour que l'on puisse en déposer 1 seul sur la première case du jeu qu'il 
+venait d'inventer, deux sur la suivante, quatre sur la troisième et ainsi de suite jusqu'à la 64e case. 
+
+Écrivez un programme Python qui affiche le nombre de grains à déposer sur chacune des 64 cases du jeu. 
+Calculez ce nombre de deux manières :
+    - le nombre exact de grains (nombre entier)
+    - le nombre de grains en notation scientifique (nombre réel) "
+
+``` ....... solution 10 ........... ```
+
+a = 1  # nombre de grains de riz
+b = 1  # numero de la case
+somme = 0  # nombre total de grains de riz
+while b < 65:
+    print(a)
+    somme += a
+    a *= 2
+    b += 1
+print("la somme des nombres est : {}".format(somme))
+print("en notation scientifique nous aurons {:.2E}".format(a))
+
+```
+
+### ****** Exercice 11 ******
+
+```bash
+``` .......... exo 11 ............. ```
+
+" En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque 
+terme est la somme des deux termes qui le précèdent. 
+Elle commence généralement par les termes 0 et 1 (parfois 1 et 1) 
+et ses premiers termes sont 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, etc.
+
+Écrivez un programme paramétrique qui fournit la série de Fibonacci pour obtenir les valeurs de n termes. "
+
+``` ....... solution 11 ........... ```
+
+def fibonacci(n):
+    """
+        retourne le terme d'indice n de la suite de Fibonacci (F0=0, F1=1)
+    """
+    assert n >= 0, "La suite de Fibonacci commence à l'indice 0, F0=0"
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 2) + fibonacci(n - 1)
+
+```
+
+### ****** Exercice 12 ******
+
+```bash
+``` .......... exo 12 ............. ```
+
+" Calcule le revenu generés apres x années d'investissement en bourse 
+en sachant que tu gagnes environ 7 % par mois et que tu investi une somme fixe chaque mois "
+
+``` ....... solution 12 ........... ```
+
+a = int(input("Sur combien d'années souhaitez vous investir ? : "))
+
+print(a)
+m = 200 # la cotisation initiale mensuelle
+b = 0   # cumul des revenus gagnés
+i = 0
+c = 0   # total investi
+ci = 500 # somme reinvestie chaque mois
+while i < a*12 :
+    b = m + m*0.07
+    m += m*0.07 + ci
+    c = c + ci
+    i += 1
+    print("Bravo !!! Au {} eme mois, vous avez généré {} euros en "
+          "demarrant uniquement avec 200 € et en rajoutant {} € chaque mois ...".format(i, round(b, 3), ci))
+print(f"Bravo !!! Sur ces {a} derniers années, vous avez investi au total {c} euros et gagné {b:.2f} euros")
+print("Bravo !!! En {} années, soit {} mois, vous avez généré {} euros...".format(a, a*12, round(b, 2)))
+# {b:.2f} et round(b, 2) permettent d'afficher 2 chiffres apres la virgules du nombre {b}
+```
+
+### ****** Exercice 13 ******
+
+```bash
+``` .......... exo 13 ............. ```
+
+"  "
+
+``` ....... solution 13 ........... ```
+
+a
+
+```
+
+### ****** Exercice 14 ******
+
+```bash
+``` .......... exo 14 ............. ```
+
+"  "
+
+``` ....... solution 14 ........... ```
+
+a
+
+```
+
+### ****** Exercice 15 ******
+
+```bash
+``` .......... exo 15 ............. ```
+
+"  "
+
+``` ....... solution 15 ........... ```
+
+a
+
+```
+
 ## PARTIE 2
 
 ### ******   Les Dictionnaires    ******
