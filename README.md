@@ -1,5 +1,6 @@
 ## Hands_on-Python
 
+## PARTIE 1
 
 ### ******    1: Intro et Exercices    ******
 
@@ -156,7 +157,7 @@
   while compteur <=10:
       print(compteur)
       compteur +=1 
-# la boucle incrementer compteur de 1 A chaque tour et tant que compteur
+# la boucle incremente compteur de 1 A chaque tour et tant que compteur
 # n'aura pas atteint 10 il continuera et affichera le resultat
 # Si on ne rajoute pas l'incrementation on cree ainsi une boucle infinie et il va afficher 1 sans s'arreter
 ```    
@@ -182,6 +183,12 @@
     print(fruits)
 # le resultat devient
     ['banane', 'poires', 'goyave']
+    
+# on peut aussi supprimer un element selon son indice
+    fruits.remove(fruits[1])
+    print(fruits)
+# le resultat devient
+    ['banane','goyave']
 
 # on peut aussi parcourir les elements d'une liste
     for test in fruits:
@@ -200,8 +207,9 @@
 # Une fonction personalisée permet d'eviter de repeter le code et mieux s'organiser
 
 #on cree la fonction
-    def direbonjour(nom):
+    def direbonjour(nom): 
         print('bonjour ' + nom)
+#nom est le parametre de la fonction. on peut bien sure en creer sans.
 
     nom =input('entrer le nom 1 : ')
     nom_2 =input('entrer le nom 2 : ')
@@ -223,7 +231,7 @@
     salaire_2= int(input('quel est le salaire 2 ? '))
     
     resultat = somme(salaire_1, salaire_2)
-    print(resultat)
+    print(f"la somme des salaires est : {resultat}")
 ```
 
 ### ******   Exercice 2    ******
@@ -281,7 +289,7 @@
   print("bonJOur".lower())
 # met la premiere lettre du premier mot en majuscule
   print("bonJOur".capitalize())
-# met toute les premires lettres de chaque mot en majuscule
+# met toute les premieres lettres de chaque mot en majuscule
   print("bonJOur".title())  
 # remplace une chaine par ce que nous voulons
   print("bonjour tout le monde".replace("jour", "soir"))
@@ -296,16 +304,14 @@
 # on obtient
   ['1', '2', '3', '4', '5', '6', '7']
 
-# join quant a lui creer une chaine de caractere et peut rajouter des elements que nous souhaitons
+# join quant a lui cree une chaine de caractere et peut rajouter des elements que nous souhaitons
 # ici on met en parametre la sortie du split precedent 
 #soit le resultat  ['1', '2', '3', '4', '5', '6', '7']
   print(".".join("1, 2, 3, 4, 5, 6, 7".split(", ")))
 #on obtient
   1.2.3.4.5.6.7
 
- Join et Split sont des methodes qu'on utilise uniquement sur des chaines de caracteres
-
-
+# Join et Split sont des methodes qu'on utilise uniquement sur des chaines de caracteres
 
 # on peut aussi verifier le type d'une chaine avec les differentes methodes
 
@@ -319,6 +325,42 @@
 ## va retourner True parce que toute la chaine verifier la condition
 
 ```
+## ****** Exercices Partie 1 ******
+
+### ****** Exercice 1 ******
+
+```bash
+''' enonce 1 '''
+``` enonce 1 ```
+# .......... exo 1 .............
+
+Écrivez un script qui détermine si une chaîne contient ou non le caractère « e ».
+
+# ....... solution 1 ...........
+
+nom = input("entrer une phrase: ")
+print(nom)
+lc = len(nom)
+mot = "e"
+t = False
+
+for i in range(lc):
+    if nom[i] == mot:
+        t = True
+    i = i + 1
+print(t)
+
+if t:
+    print(f" le caractere {mot} est present dans la chaine {nom}")
+else:
+    print(f" le caractere {mot} n'est pas present dans la chaine {nom}")
+
+''' Solution 1 '''
+``` Solution 1 ```
+
+```
+
+## PARTIE 2
 
 ### ******   Les Dictionnaires    ******
 
