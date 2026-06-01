@@ -330,13 +330,11 @@
 ### ****** Exercice 1 ******
 
 ```bash
-''' enonce 1 '''
-``` enonce 1 ```
-# .......... exo 1 .............
+''' .......... exo 1 ............. '''
 
 Écrivez un script qui détermine si une chaîne contient ou non le caractère « e ».
 
-# ....... solution 1 ...........
+''' ....... solution 1 ........... '''
 
 nom = input("entrer une phrase: ")
 print(nom)
@@ -355,11 +353,119 @@ if t:
 else:
     print(f" le caractere {mot} n'est pas present dans la chaine {nom}")
 
-''' Solution 1 '''
-``` Solution 1 ```
+```
+
+### ****** Exercice 2 ******
+
+```bash
+''' .......... exo 2 ............. '''
+
+Écrivez un script qui recopie une chaîne (dans une nouvelle variable), en insérant des astérisques entre les caractères.
+# Par exemple, « gaston » devra devenir « g*a*s*t*o*n »
+
+''' ....... solution 2 ........... '''
+
+a = input("entrer une mot: ")
+b = '*'.join(a)
+print(b)
 
 ```
 
+### ****** Exercice 3 ******
+
+```bash
+''' .......... exo 3 ............. '''
+
+Écrivez un script qui recopie une chaîne (dans une nouvelle variable) en l_inversant. 
+# Par exemple, « zorglub » deviendra « bulgroz ».
+
+''' ....... solution 3 ........... '''
+
+a = input("entrer une mot: ")
+b = ''.join(reversed(a))
+print(b)
+
+```
+
+### ****** Exercice 4 ******
+
+```bash
+''' .......... exo 4 ............. '''
+
+À partir d_une chaine quelconque (par exemple chaine="abcdefghijk" ), 
+écrivez un programme qui récupère et affiche autant de caractères 
+que possible de cette chaine sous forme de suite pyramidale.
+
+a 
+bc 
+def 
+ghij 
+klmno 
+pqrstu 
+vwxyzab 
+cdefghij
+
+''' ....... solution 4 ........... '''
+
+a = input("entrer une mot: ")
+b = ''.join(a.split(" "))
+print(b)
+lc = len(b)
+print(lc)
+
+for i in range(lc+1): # le +1 nous permet d'arriver sur le dernier indice de la chaine
+    print(b[:i])
+    i = i + 1
+
+```
+
+### ****** Exercice 5 ******
+
+```bash
+''' .......... exo 5 ............. '''
+
+Jules César, général et stratège romain, a été (à ce qu'il semble) le premier militaire officiel à chiffrer ses messages. 
+Sa méthode était assez simple : il décalait les lettres de 3 rangs dans l'alphabet.
+Le but de cet exercice est de créer une fonction à laquelle on donne un message et un décalage, 
+et la fonction renvoie alors le message décalé dans l'alphabet. 
+Il faudra faire attention que le message peut contenir des caractères ne faisant pas forcément partie de l'alphabet 
+et dans ce cas, pour ne pas perdre la signification du texte, ces caractères doivent réapparaitre 
+à l'identique dans le message chiffré. 
+De plus, il faudra gérer le dépassement ('z' décalé vers la droite revient sur 'a', et 'a' décalé vers la gauche revient sur 'z').
+À noter que la fonction pourra être utilisée aussi bien pour chiffrer que pour déchiffrer 
+(il suffit pour cela de lui passer le message chiffré avec l'opposé du décalage utilisé pour retrouver le message d'origine).
+Remarque: il s'agit du tout premier exercice faisant intervenir la notion de fonction à créer
+
+''' ....... solution 5 ........... '''
+
+message = input("entrer un message a chiffrer ou a dechiffrer : ")
+print(message)
+
+def cesar(msg="", clef=0):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    chiffre = ""
+
+    # On prend chaque lettre du mot (converti en minuscules)
+    for i in msg.lower():
+        # On recherche la position de la lettre dans l'alphabet
+        pos = alphabet.find(i)
+
+        # Si la lettre est présente
+        if pos != -1:
+            # On récupère la lettre décalée dans l'alphabet (on boucle si dépassement)
+            chiffre += alphabet[(pos + clef) % len(alphabet)]
+        else:
+            # Sinon on prend la lettre originelle
+            chiffre += i
+        # if
+    # for
+    return chiffre
+
+chiffre = cesar(message, 7)
+dechiffre = cesar(chiffre, -7)
+print(f"=> message original : {message}, \n=> message chiffré : {chiffre}, \n=> message dechiffré : {dechiffre}")
+
+```
 ## PARTIE 2
 
 ### ******   Les Dictionnaires    ******
