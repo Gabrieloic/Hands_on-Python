@@ -422,8 +422,9 @@ for i in range(lc+1): # le +1 nous permet d'arriver sur le dernier indice de la 
 ### ****** Exercice 5 ******
 
 ```bash
-''' .......... exo 5 ............. '''
+``` .......... exo 5 ............. ```
 
+" 
 Jules César, général et stratège romain, a été (à ce qu'il semble) le premier militaire officiel à chiffrer ses messages. 
 Sa méthode était assez simple : il décalait les lettres de 3 rangs dans l'alphabet.
 Le but de cet exercice est de créer une fonction à laquelle on donne un message et un décalage, 
@@ -435,8 +436,8 @@ De plus, il faudra gérer le dépassement ('z' décalé vers la droite revient s
 À noter que la fonction pourra être utilisée aussi bien pour chiffrer que pour déchiffrer 
 (il suffit pour cela de lui passer le message chiffré avec l'opposé du décalage utilisé pour retrouver le message d'origine).
 Remarque: il s'agit du tout premier exercice faisant intervenir la notion de fonction à créer
-
-''' ....... solution 5 ........... '''
+"
+``` ....... solution 5 ........... ```
 
 message = input("entrer un message a chiffrer ou a dechiffrer : ")
 print(message)
