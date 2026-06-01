@@ -405,7 +405,316 @@
 #Solution
 
 
-nombre1 = int(input("entrer un nombre 1 : "))
+'''nombre1 = int(input("entrer un nombre 1 : "))
 nombre2 = int(input("entrer un nombre 2 : "))
 nombre3 = int(input("entrer un nombre 3 : "))
 print(f" la somme de {nombre1} et {nombre2} et {nombre3} est {nombre3+nombre2+nombre1} et le produit est {nombre3*nombre1*nombre2} ")
+
+'''
+
+
+## EXERCICES PYTHON.........................
+
+
+# .......... exo 1 .............
+'''
+Écrivez un script qui détermine si une chaîne contient ou non le caractère « e ».
+'''
+from cmath import sqrt
+
+# ....... solution 1 ...........
+
+'''
+nom = input("entrer une phrase: ")
+print(nom)
+lc = len(nom)
+mot = "e"
+t = False
+
+for i in range(lc):
+    if nom[i] == mot:
+        t = True
+    i = i + 1
+print(t)
+
+if t:
+    print(f" le caractere {mot} est present dans la chaine {nom}")
+else:
+    print(f" le caractere {mot} n'est pas present dans la chaine {nom}")
+'''
+
+# .......... exo 2 .............
+
+'''
+Écrivez un script qui recopie une chaîne (dans une nouvelle variable), en insérant des astérisques entre les caractères.
+# Par exemple, « gaston » devra devenir « g*a*s*t*o*n »
+'''
+
+# ....... solution 2 ...........
+''' 
+a = input("entrer une mot: ")
+b = '*'.join(a)
+print(b)
+'''
+
+
+
+# .......... exo 3 .............
+'''
+Écrivez un script qui recopie une chaîne (dans une nouvelle variable) en l'inversant. 
+Par exemple, « zorglub » deviendra « bulgroz ».
+
+'''
+# ....... solution 3 ...........
+'''
+a = input("entrer une mot: ")
+b = ''.join(reversed(a))
+print(b)
+'''
+
+
+# .......... exo 4 .............
+'''
+
+À partir d'une chaine quelconque (par exemple chaine="abcdefghijk" ), 
+écrivez un programme qui récupère et affiche autant de caractères 
+que possible de cette chaine sous forme de suite pyramidale.
+
+a 
+bc 
+def 
+ghij 
+klmno 
+pqrstu 
+vwxyzab 
+cdefghij
+
+'''
+
+# ....... solution 4 ...........
+'''
+a = input("entrer une mot: ")
+b = ''.join(a.split(" "))
+print(b)
+lc = len(b)
+print(lc)
+
+for i in range(lc+1): # le +1 nous permet d'arriver sur le dernier indice de la chaine
+    print(b[:i])
+    i = i + 1
+'''
+
+
+# .......... exo 5 .............
+
+'''
+Jules César, général et stratège romain, a été (à ce qu'il semble) le premier militaire officiel à chiffrer ses messages. 
+Sa méthode était assez simple : il décalait les lettres de 3 rangs dans l'alphabet.
+Le but de cet exercice est de créer une fonction à laquelle on donne un message et un décalage, 
+et la fonction renvoie alors le message décalé dans l'alphabet. 
+Il faudra faire attention que le message peut contenir des caractères ne faisant pas forcément partie de l'alphabet 
+et dans ce cas, pour ne pas perdre la signification du texte, ces caractères doivent réapparaitre 
+à l'identique dans le message chiffré. 
+De plus, il faudra gérer le dépassement ('z' décalé vers la droite revient sur 'a', et 'a' décalé vers la gauche revient sur 'z').
+À noter que la fonction pourra être utilisée aussi bien pour chiffrer que pour déchiffrer 
+(il suffit pour cela de lui passer le message chiffré avec l'opposé du décalage utilisé pour retrouver le message d'origine).
+Remarque: il s'agit du tout premier exercice faisant intervenir la notion de fonction à créer
+'''
+# ....... solution 5 ...........
+
+'''
+message = input("entrer un message a chiffrer ou a dechiffrer : ")
+print(message)
+
+def cesar(msg="", clef=0):
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    chiffre = ""
+
+    # On prend chaque lettre du mot (converti en minuscules)
+    for i in msg.lower():
+        # On recherche la position de la lettre dans l'alphabet
+        pos = alphabet.find(i)
+
+        # Si la lettre est présente
+        if pos != -1:
+            # On récupère la lettre décalée dans l'alphabet (on boucle si dépassement)
+            chiffre += alphabet[(pos + clef) % len(alphabet)]
+        else:
+            # Sinon on prend la lettre originelle
+            chiffre += i
+        # if
+    # for
+    return chiffre
+
+chiffre = cesar(message, 7)
+dechiffre = cesar(chiffre, -7)
+print(f"=> message original : {message}, \n=> message chiffré : {chiffre}, \n=> message dechiffré : {dechiffre}")
+'''
+
+# .......... exo 6 .............
+'''
+Écrivez un programme qui affiche les 20 premiers termes de la table de multiplication par 7, 
+en signalant au passage (à l'aide d'une astérisque) ceux qui sont des multiples de 3.
+Exemple : 7 14 21 * 28 35 42 * 49 56 63 * 70 77 84 * 91 98 105 * 112 119 126 * 133 140
+'''
+
+# ....... solution 6 ...........
+'''
+a = 1
+while a < 21:
+    b= a*7
+    if b %3 == 0:
+        print(f"{b}*")
+    else :
+        print(b)
+    a += 1
+'''
+
+# .......... exo 7 .............
+
+'''
+Écrivez un programme qui affiche une table de conversion de sommes d'argent exprimées en euros, en dollars canadiens. 
+La progression des sommes de la table sera « géométrique », comme dans l'exemple ci-dessous :
+1 euro(s) = 1.65 dollar(s)
+2 euro(s) = 3.30 dollar(s)
+4 euro(s) = 6.60 dollar(s)
+8 euro(s) = 13.20 dollar(s)
+etc. (S'arrêter à 16384 euros)
+'''
+# ....... solution 7 ...........
+'''
+a = 1
+b = 1.65
+while a < 16383:
+    print(f"{2*a} euros = {a*b} dollars ")
+    a *= 2
+'''
+
+# .......... exo 8 .............
+
+'''
+Écrivez un programme qui affiche une suite de 12 nombres dont chaque terme est égal au triple du terme précédent.
+Vous pouvez consulter le cours : 
+apprendre à programmer avec Python : http://python.developpez.com/cours/TutoSwinnen/
+'''
+# ....... solution 8 ...........
+'''
+a = 1
+c = 1
+while c < 13:
+    print(3*a)
+    a *= 3
+    c += 1
+'''
+# .......... exo 9 .............
+
+'''
+Calculez la somme d'une suite de nombres positifs ou nuls. Comptez combien il y avait de données et combien étaient supérieures à 100.
+Entrer un nombre inférieur ou égal à 0 indique la fin de la suite.
+'''
+# ....... solution 9 ...........
+'''
+somme = 0
+total = 0
+grand = 0
+
+a = int ( input("entrer un nombre pour continuer, sinon 0 pour terminer :"))
+while a > 0:
+    somme += a
+    total += 1
+    if a > 100:
+        grand += 1
+    a = int ( input("entrer un nombre pour continuer, sinon 0 pour terminer : "))
+
+print(f"la somme des nombres est : {somme}")
+print(f"vous avez saisi {total} valeurs en tout, dont {grand} sont supérieures à 100")
+
+'''
+
+# .......... exo 10 .............
+'''
+Une légende de l'Inde ancienne raconte que le jeu d'échecs a été inventé par un vieux sage, que son roi voulut 
+remercier en lui affirmant qu'il lui accorderait n'importe quel cadeau en récompense. 
+Le vieux sage demanda qu'on lui fournisse simplement un peu de riz pour ses vieux jours et plus précisément 
+un nombre de grains de riz suffisant pour que l'on puisse en déposer 1 seul sur la première case du jeu qu'il 
+venait d'inventer, deux sur la suivante, quatre sur la troisième et ainsi de suite jusqu'à la 64e case. 
+
+Écrivez un programme Python qui affiche le nombre de grains à déposer sur chacune des 64 cases du jeu. 
+Calculez ce nombre de deux manières :
+    - le nombre exact de grains (nombre entier)
+    - le nombre de grains en notation scientifique (nombre réel)
+'''
+# ....... solution 10 ...........
+
+'''
+a = 1  # nombre de grains de riz
+b = 1  # numero de la case
+somme = 0  # nombre total de grains de riz
+while b < 65:
+    print(a)
+    somme += a
+    a *= 2
+    b += 1
+print("la somme des nombres est : {}".format(somme))
+print("en notation scientifique nous aurons {:.2E}".format(a))
+'''
+
+
+# .......... exo 11 .............
+'''
+En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque 
+terme est la somme des deux termes qui le précèdent. 
+Elle commence généralement par les termes 0 et 1 (parfois 1 et 1) 
+et ses premiers termes sont 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, etc.
+
+Écrivez un programme paramétrique qui fournit la série de Fibonacci pour obtenir les valeurs de n termes.
+'''
+# ....... solution 11 ...........
+
+'''
+def fibonacci(n):
+    """
+        retourne le terme d'indice n de la suite de Fibonacci (F0=0, F1=1)
+    """
+    assert n >= 0, "La suite de Fibonacci commence à l'indice 0, F0=0"
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 2) + fibonacci(n - 1)
+
+
+print([fibonacci(n) for n in range(17)])  # suite F0 à F16
+'''
+# .......... exo 12 .............
+'''calcule le revenu generés apres x années d'investissement en bourse 
+en sachant que tu gagnes environ 7 % par mois '''
+
+# ....... solution 12 ...........
+a = int(input("Sur combien d'années souhaitez vous investir ? : "))
+
+print(a)
+m = 200 # la cotisation initiale mensuelle
+b = 0   # cumul des revenus gagnés
+i = 0
+c = 0   # total investi
+
+while i < a*12 :
+    b = m + m*0.07
+    m += m*0.07 + 500
+    c = c + 500
+    i += 1
+    print("Bravo !!! Au {} eme mois, vous avez généré {} euros en "
+          "demarrant uniquement avec 700 € et en rajoutant {} € chaque mois ...".format(i, round(b, 2), i-1, m))
+print(f"Sur ces {a} derniers années, vous avez investi au total {c} euros et gagné {b} euros")
+#print("Bravo !!! En {} années, soit {} mois, vous avez généré {} euros...".format(a, a*12, round(b, 2)))
+
+# .......... exo 13 .............
+# ....... solution 13 ...........
+
+# .......... exo 14 .............
+# ....... solution 14 ...........
+
+# .......... exo 15 .............
+# ....... solution 15 ...........
