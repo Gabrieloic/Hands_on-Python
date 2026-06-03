@@ -831,6 +831,9 @@ a
 
 ```bash
 
+********  Le module random ******** 
+pour gere les nombres aleatoires
+
 
     import math
     print(math.sqrt(25))
@@ -838,9 +841,27 @@ a
 
 # on peut importe une simple fonction d'une bibliothe plutot que la bibliotheque entiere
 
-    from random import randint
+    from random import randint # ca veut dire que du module random on n#importe que la fonction randint car on aura besoin d'elle
     print(randint(1,45))
 # cette fonction me permet de generer un nombre aleatoire entre la selection que je specifie
+  
+#Si on veut afficher des nombres decimaux aleatoires on utilise le module uniform qui est dans la biblio random
+
+  from random import uniform
+  for i in range (10):
+      r = (uniform(1,10))
+      print(r)
+# j'utilise la boucle juste pour afficher la liste de 10 nombre aleatoire
+# mais sinon on peut faire sans
+
+# Une autre fonction pour afficher des nombres aleatoires c'est randrange
+  from random import randrange
+  r = randrange(1,106, 5)
+  print(r)
+
+# ce code nous permet de generer des nombres aleatoires entre l'intervalle [1 : 106]
+# et le troisieme parametre est le pas 
+# donc tous les nombres qu'on aura auront un pas de 5. 
 
 # on peut aussi importer des modules supplementaires qui ne sont pas presentes nativement par defaut sur python 
 
@@ -859,6 +880,54 @@ a
     print(reponse.status_code)
 # le resultat est
     200 # c.a.d que le site est accessible depuis notre code
+    
+
+********  Le module os ******** 
+pour gerer les fichiers / dosiers
+
+# on commence toujours par importer le module pour pouvoir l'utiliser dans notre code
+  import os
+  chemin = "/Users/the-dogfather/PycharmProjects/Hands_on-Python" # dans ce cas c'est le chemin du dossier dans lequel on veut manipuler nos dossier/fichiers
+  nouveau = os.path.join(chemin, "dossier")
+  print(nouveau)  
+   
+  # pour ne pas se tracasser a faire des slash ou anti-slash, car sur linux et windows c'est different,
+  # on fait appel a la fonction join qui va concatener en rajoutant lui meme le slash a la fin
+  # le resultat sera 
+  >> /Users/the-dogfather/PycharmProjects/Hands_on-Python/dossier
+  
+  # si on a un sous dossier on peut aussi le specifier dans la commande
+    nouveau = os.path.join(chemin, "dossier", "sous-dossier")
+    >> /Users/the-dogfather/PycharmProjects/Hands_on-Python/dossier/sous-dossier
+
+
+# Toujours pour la gestion des dossiers on peut remarque une subtilitè
+2 fonctions
+      makedirs :
+        - peut creer plusieurs dossiers inexistants
+        - il ne peut pas creer un dossier qui existe deja
+  nouveau = os.path.join(chemin, "dossier", "sous-dossier")
+  os.makedirs(nouveau) # va creer le dossier nouveau, avec son sous dossier a l'interieur
+        
+# Si on veut verifier introduire une condition qui verifiera si le dossier existe on peut faire:
+  os.makedirs(nouveau, exist_ok=True) # la fonction exist va verifier la condition sinon on peut le faire avec "if"
+        
+      mkdirs :
+        - peut creer un seul dossier a la fois
+  nouveau = os.path.join(chemin, "dossier", "sous-dossier")
+  os.mkdir(nouveau) # va retourner une erreur parce qu'il ne peut pas creer des sous dossiers
+  
+# A l'inverse on peut aussi supprimer des dossiers
+    os.removedirs(nouveau) # va supprimer tout le dossier et les sous dossiers
+    # et si on veut verifier si le dossier existe on utilise la condition "if"
+
+
+
+
+
+
+
+
 
 ```
 
